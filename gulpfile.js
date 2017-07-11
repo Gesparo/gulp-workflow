@@ -38,3 +38,22 @@ $.gulp.task('default', $.gulp.series(
     'serve'
   )
 ));
+
+$.gulp.task('production', $.gulp.series(
+    'clean',
+    $.gulp.parallel(
+        'sass-prod',
+        'pug',
+        'js:foundation',
+        'js:process-prod',
+        'copy:image',
+        'css:foundation',
+        'sprite:svg',
+        'copy:favicon',
+        'php'
+    ),
+    $.gulp.parallel(
+        'watch',
+        'serve'
+    )
+));

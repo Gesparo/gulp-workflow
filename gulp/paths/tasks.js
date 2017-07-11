@@ -14,6 +14,10 @@ module.exports = [
   './gulp/tasks/sprite.svg.js',
   './gulp/tasks/ftp.js',
   './gulp/tasks/php.js',
-  './gulp/tasks/copy.favicon.js'
+  './gulp/tasks/copy.favicon.js',
+
+  // production
+  './gulp/tasks/production/sass.prod.js',
+  './gulp/tasks/production/js.process.prod.js'
 ];
 
